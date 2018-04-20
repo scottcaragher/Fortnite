@@ -8,19 +8,19 @@
 from turtle import *
 from random import randint
 
-
+#DISPLAYING MAP OF FORTNITE
 bgTurtle = Turtle()
 screenTurtle = bgTurtle.getscreen()
 screenTurtle.bgpic("map.gif")
 screenTurtle.setup(1024.1240)
 
-
+#INPUT FOR WHERE THE USER WANTS TO LAND
 textTurtle = Turtle()
 
 screenText = textTurtle.getscreen()
 
 myDialogue = screenText.textinput("Fortnite", "Battle Bus is fueling. Waiting for players... Where would you like to land?")
-turtle.resetscreen()
+#turtle.resetscreen()
 #screenText.screensize(200,200)
 #turtle.hideturtle()
 #screenTurtle = bgTurtle.getscreen()
@@ -31,14 +31,14 @@ textTurtle.setpos(-100,100)
 textTurtle.write(myDialogue, move = False, align="left", font=("Arial", 16, "normal"))
 
 
-# drop = input("junk junction, anarchy acres, haunted hills, wailing woods, pleasant park, tomato town, loot lake, lonely lodge, snobby shores, tilted towers, dusty depot, retail row, greasy grove, salty springs, shifty shafts, fatal fields, moisty mire, flush factory")
 
+#IF THEY CHOOSE TO DROP TILTED
 if myDialogue == "tilted towers":
     textTurtle.write("You land on a brick building and pick up a green pump shotgun.")
+    #30% CHANCE OF DYING AND 70% CHANCE OF SURVIVING
     computerTilted = randint(1,10)
     if computerTilted > 3:
         textTurtle.write("Another player lands next to you and you quickly eliminate him with two shots. Good job!")
-        questOne()
         
     else:
         textTurtle.write("Another player lands on the roof, breaks the ceiling, and one pumps you in the head with a shotgun.")
@@ -47,4 +47,4 @@ if myDialogue == "tilted towers":
         textTurtle.write("Please play again")
         done()
 
-QuestOne():
+
