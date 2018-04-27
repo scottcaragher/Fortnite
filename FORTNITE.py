@@ -14,7 +14,8 @@ textTurtle = Turtle()
 screenText = textTurtle.getscreen()
 myDialogue = screenText.textinput("Fortnite", "Battle Bus is fueling. Waiting for players... Where would you like to land?")
 
-
+#Link for code to display text
+# https://stackoverflow.com/questions/42014195/rendering-text-with-multiple-lines-in-pygame
 SIZE = WIDTH, HEIGHT = (1024, 720)
 FPS = 30
 screen = pygame.display.set_mode(SIZE, pygame.RESIZABLE)
@@ -39,7 +40,7 @@ def blit_text(surface, text, pos, font, color=pygame.Color('red')):
         y += word_height  # Start on new row.
 
 if myDialogue == "tilted towers":
-    text = "You land on a brick building and pick up a green pump shotgun."\
+    text = "You land on a brick building and pick up a green pump shotgun."
     #30% CHANCE OF DYING AND 70% CHANCE OF SURVIVING
     computerTilted = randint(1,10)
     if computerTilted > 3:
@@ -52,10 +53,7 @@ if myDialogue == "tilted towers":
         text = "Please play again"
         done()
 
-#text = "This is a really long sentence with a couple of breaks.\nSometimes it will break even if there isn't a break " \
-    # #   "in the sentence, but that's because the text is too long to fit the screen.\nIt can look strange sometimes.\n" \
-    #    "This function doesn't check if the text is too high to fit on the height of the surface though, so sometimes " \
-    #    "text will disappear underneath the surface"
+
 font = pygame.font.SysFont('Arial', 14)
 
 while True:
@@ -69,3 +67,6 @@ while True:
     screen.fill(pygame.Color('black'))
     blit_text(screen, text, (20, 20), font)
     pygame.display.update()
+
+import QuestOne
+QuestOne()
