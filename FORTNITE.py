@@ -53,7 +53,7 @@ if myDialogue == "tilted towers":
         done()
 
 #text = "This is a really long sentence with a couple of breaks.\nSometimes it will break even if there isn't a break " \
-    #    "in the sentence, but that's because the text is too long to fit the screen.\nIt can look strange sometimes.\n" \
+    # #   "in the sentence, but that's because the text is too long to fit the screen.\nIt can look strange sometimes.\n" \
     #    "This function doesn't check if the text is too high to fit on the height of the surface though, so sometimes " \
     #    "text will disappear underneath the surface"
 font = pygame.font.SysFont('Arial', 14)
