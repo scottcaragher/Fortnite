@@ -2,11 +2,15 @@ import pygame
 pygame.init()
 from turtle import *
 from random import randint
+import QuestA
+import QuestB
+import QuestC
+import QuestD
 
 #DISPLAYING MAP OF FORTNITE
 bgTurtle = Turtle()
 screenTurtle = bgTurtle.getscreen()
-screenTurtle.bgpic("map.gif")
+screenTurtle.bgpic("bgMap.gif")
 screenTurtle.setup(1024.1240)
 
 #INPUT FOR WHERE THE USER WANTS TO LAND
@@ -43,8 +47,9 @@ if myDialogue == "tilted towers":
     text = "You land on a brick building and pick up a green pump shotgun."
     #30% CHANCE OF DYING AND 70% CHANCE OF SURVIVING
     computerTilted = randint(1,10)
-    if computerTilted > 3:
+    if computerTilted > 9:
         text = "Another player lands next to you and you quickly eliminate him with two shots. Good job!"
+        QuestAA()
         
     else:
         text = "Another player lands on the roof, breaks the ceiling, and one pumps you in the head with a shotgun."
@@ -53,6 +58,14 @@ if myDialogue == "tilted towers":
         text = "Please play again"
         done()
 
+if myDialogue == "pleasant park":
+    QuestBA()
+
+if myDialogue == "shifty shafts":
+    QuestCA()
+
+#if myDialogue == "greasy grove"
+    
 
 font = pygame.font.SysFont('Arial', 14)
 
@@ -68,5 +81,3 @@ while True:
     blit_text(screen, text, (20, 20), font)
     pygame.display.update()
 
-import QuestOne
-QuestOne()
