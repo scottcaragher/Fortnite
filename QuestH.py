@@ -1,9 +1,10 @@
+#stage 1
 def QuestHA():
     text = "You land on a restaurant and find a shotgun."
-    computerQuestHA = randint(0,10)
+    #70% chance of survival
+    computerQuestHA = randint(1,10)
     if computerQuestHA > 3:
         QuestHB()
-        
     else:
         text = "Another player lands on the same building and kills you with a submachine gun."
         text = "You have been eliminated."
@@ -11,37 +12,41 @@ def QuestHA():
         text = "Please play again"
         done()
 
+#stage 2
 def QuestHB():
     text = "You collect an Assault Rifle, and a launch pad. The storm forms around tilted towers."
     text = "You head towards Tilted and see a piñata fall from the sky."
+    #user input choice
     myDialogueQuestHB = screenText.textinput("Fortnite", "1. Go check out the piñata? 2. Or keep moving? Please Choose 1 or 2.")
 
     if myDialogueQuestHB == "2":
         text = "You avoid the piñata which couldve been a potential trap." 
         QuestHC()
 
-    
     if myDialogueQuestHB == "1":
         text = "You start opening the piñata."
-        computerQuestHB = randint(0,10)
-        if computerQuestHB > 4:
+        computerQuestHB = randint(1,10)
+        #60% chance of survival
+        if computerQuestHB > 6:
             text = "Someone snipes you because you didn't build protection around yourself."  
             text = "Always build protection."
             text = "please play again."
             done()
-
         else:
             text = "You gather an abundance of materials and ammo. Lucky you." 
             QuestHC()
 
+#stage 3
 def QuestHC(): 
     text = "There are 4 other players remaining as you head on to Tilted."  
     text = "Someone starts shooting at you from afar, you immediately build a great fort."  
+    #user input choice
     myDialogueQuestHC = screenText.textinput("Fortnite", "1. Use you Rifle? Or 2. Launch Pad outta there? Please Choose 1 or 2.")
 
     if myDialogueQuestHC == "1":
-        computerQuestHC = randint(0,10)
-        if computerQuestHC > 4:
+        computerQuestHC = randint(1,10)
+        #60% chance of survival
+        if computerQuestHC > 6:
             text = "Your slow to shoot him and he kills you."
             text = "Please try again."  
             done()
@@ -53,9 +58,11 @@ def QuestHC():
         text = "You see him running up so you take the easy road and evaid him with the launch pad."  
         QuestHD()
 
+#stage 4
 def QuestHD():
     text = "There's 3 players remaining and you build a fort in the zone. A guy lauches toward you."
     text = "You eliminate him in the air and now there's one opponent left."
+    #user input choice
     myDialogueQuestHD = screenText.textinput("Fortnite", "1. Engage him from 50 yards away? 2. Stay in your fort for protection? Please choose 1 or 2.")
 
     if myDialogueQuestHD == "1":
@@ -66,7 +73,8 @@ def QuestHD():
     
     if myDialogueQuestHD == "2":
         text = "Your rifle does little damage to his walls as he engages."
-        computerQuestHB = randint(0,10)
+        #50% chance of winning with this choice
+        computerQuestHB = randint(1,10)
         if computerQuestHB > 5:
             text = "You gather the few shotgun shells you have left and wait for his arrival."
             text = "You jump out at him kill him with 2 pumps to the head."
