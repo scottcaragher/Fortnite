@@ -111,5 +111,5 @@ while True:
     #Screen color
     screen.fill(pygame.Color('black'))
     blit_text(screen, text, (20, 20), font)
-    pygame.display.update()
+    pygame.display.update() 
 

@@ -85,4 +85,4 @@ def QuestHD():
             text = "He comes close as you make your last and final attack on him but he kills you with his sub machine gun."
             text = "Nice try, you'll get him next time."
             done()
-        
+         

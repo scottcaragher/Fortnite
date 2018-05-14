@@ -46,7 +46,7 @@ def QuestAB():
             text = "You have been eliminated."  
             text = "Sorry."  
             text = "Please play again"  
-            done()
+            done() 
 
 #third stage of questA
 def QuestAC():

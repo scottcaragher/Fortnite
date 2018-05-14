@@ -65,4 +65,4 @@ def QuestJC():
         else:
             text = "He jumps right ontop of you with his shotgun and ends you."
             text = "Be more ready next time. Please play again."
-            done()
+            done() 

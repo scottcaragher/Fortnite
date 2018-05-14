@@ -81,6 +81,6 @@ def QuestDD():
         text = "With great power comes great responsibility of knowing how to aim."  
         text = "An embarrassing way to die but maybe next time you'll do better."  
         text = "Play again."  
-        done()
+        done() 
 
 

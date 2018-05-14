@@ -91,4 +91,4 @@ def QuestFC():
         text = "You tried your best but maybe stay in protection."  
         text = "Sorry."  
         text = "Please play again"  
-        done()
+        done() 
