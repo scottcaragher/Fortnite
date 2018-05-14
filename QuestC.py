@@ -5,13 +5,13 @@ def QuestCA():
 
     if myDialogueQuestCA == "1":
         text = "You wait in a corner like a noob and kill him as he passes by." 
-        text = "Good job but you can't win playing it safe like that."
+        text = "Good job but it'll be difficult to win playing it safe like that."
         QuestCB()
 
     
     if myDialogueQuestCA == "2":
         text = "You move up some stairs and he's looting in a room."  
-        computerQuestCA = randint(1,10)
+        computerQuestCA = randint(0,10)
         if computerQuestCA > 3:
             text = "You start unloading on this noob and mow him down before he opens the chest."  
             text = "Great job."  
@@ -45,7 +45,7 @@ def QuestCC():
     text = "12 players left."
     text = "You mow down two noobs running into the safe zone and wait till the numbers windle down to 2."
     text = "You start getting grenade launched, your fort is destroyed, and your pinned with fire. You must try and engage."
-    computerQuestCC = randint(1,10)
+    computerQuestCC = randint(0,10)
     if computerQuestCC > 7:
         text = "You build a quick fort and drill him with bullets to his death"  
         text = "#1 VICTORY ROYALE"

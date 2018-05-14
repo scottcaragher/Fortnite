@@ -1,40 +1,54 @@
-def QuestAA():
-    text = "You collect a big shield potion, an Assault Rifle, and a medkit. The storm forms around Loot lake. You drink the sheild and now you have 50% shield"
-    text = "As your making your way down the building you hear footsteps getting closer and louder!"
-    myDialogueQuestAA = screenText.textinput("Fortnite", "1. Hide in the bathroom? 2. Or wait for him to get close enough to battle it out? Please Choose 1 or 2.")
+def QuestDA():
+    text = "You land in a store building and pick up a green pump shotgun."
+    computerQuestDA = randint(0,10)
+    if computerQuestDA > 3:
+        text = "Another player lands next to you and you quickly eliminate him with two shots. Good job!"
+        QuestDB()
+        
+    else:
+        text = "Another player lands on the roof, breaks the ceiling, and pumps you in the head with a shotgun."
+        text = "You have been eliminated."
+        text = "Sorry."
+        text = "Please play again"
+        done()
 
-    if myDialogueQuestAA == "1":
-        text = "He runs up the stairs, opens the door looking for ammo, and 360 no scopes you to the head." 
-        text = "How are you suppose to win Fortnite Battle Royale hiding in the bathroom? Pathetic." 
+def QuestDB():
+    text = "You collect a big shield potion, an Assault Rifle, crossbow, and a medkit. The storm forms around Shifty Shafts."
+    text = "As your making your way around Greasy Grove, you hear footsteps in a house."
+    myDialogueQuestDB = screenText.textinput("Fortnite", "1. Hide in a bush and let him pass? 2. Or get ready to fight him? Please Choose 1 or 2.")
+
+    if myDialogueQuestDB == "1":
+        text = "He sees you from the roof, 360 no scopes you to the head, and starts giving you the L-Dance." 
+        text = "How are you suppose to win Fortnite Battle Royale hiding in a bush? Noob status." 
         text = "Think about your actions and what kind of player you want to be then play again."
         done()
 
     
-    if myDialogueQuestAA == "2":
-        text = "He runs up the stairs and you figure out that he's a noob."  
-        computerQuestAA = randint(1,10)
-        if computerQuestAA > 3:
-            text = "You shotgun him 3 times to the head and he is eliminated but, he hit you twice with the heavy shotgun."  
-            text = "You now have 90 health and no sheild, but picked up his blue bolt action sniper."  
-            text = "Tilted Towers seems quite now so you move in on loot lake."
-            QuestAB()
+    if myDialogueQuestDB == "2":
+        text = "You enter the house and he's on the second floor, you walk up the stair and then..."  
+        computerQuestDB = randint(0,10)
+        if computerQuestDB > 4:
+            text = "you start shooting him with your shotgun till he's dead."  
+            text = "good job, 2 kills!"  
+            QuestDC()
 
         else:
-            text = "Your slow to shoot him and he headshots you. Wow, your the real noob."  
-            text = "You have been eliminated."  
-            text = "Sorry."  
-            text = "Please play again"  
+            text = "He set up a trap on the ceiling and you accidently walk right into it."  
+            text = "Hey, it happens to the best of us."  
+            text = "Make sure to always check for traps."  
+            text = "Please try again."  
             done()
 
-def QuestAB():
+def QuestDC():
     text = "Along the way you collect some wood material to build later on."  
     text = "There are 10 other players remaining."  
     text = "Someone starts shooting at you for 50 yards away, you immediately build up a fort."  
-    myDialogueQuestAB = screenText.textinput("Fortnite", "1. Use your sniper? Or 2. Assault Rifle? Please Choose 1 or 2.")
+    myDialogueQuestDC = screenText.textinput("Fortnite", "1. Use your crossbow? Or 2. Assault Rifle? Please Choose 1 or 2.")
 
-    if myDialogueQuestAB == "1":
-        text = "You missed several shots and he built up close to you and killed you with his submachine gun."
-        text = "Please try again."  
+    if myDialogueQuestDC == "1":
+        text = "You missed several shots becuase the crossbow is terrible and he built up close to you and killed you with his submachine gun."
+        text = "The only useful thing for a crossbow is the scope."
+        text = "Play again."  
         done()
     else:
         text = "You see him running up and start drilling him with the Assault Rifle."  
@@ -42,14 +56,25 @@ def QuestAB():
         text = "5 players left and the storm is in the middle of your base. You improve and ready your fort."  
         text = "You hear some other players battling it out and one has an RPG."
         text = "You watch two fights go down and now there's 3 players left."
-        text = "One of the players is healing up so you dome him in the head with your sniper, one enemy left."
+        text = "One of the players is healing up so you light him up with your rifle, one enemy left."
+        QuestDD()
 
-def QuestAC():
-    text = "Your both outside the safe zone from the storm so you move in and begin building a tall fort."
-    text = "You seem him hide in a small hut."
-    myDialogueQuestAC = screenText.textinput("Fortnite", "1. Engage him? 2. Stay in your fort for protection? Please choose 1 or 2.")
-
-    if myDialogueQuestAC == "1":
-        text = "You begin your way to the hut and shotgun him once, he hits you, you hit him again with the pump, he misses, and you kill him for the win."
+def QuestDD():
+    text = "Your both outside the safe zone from the storm so you move in and collect some loot from your kills."
+    text = "You pick up a, wait for it..., Golden RPG."
+    text = "You engage instantly."  
+    computerQuestDD = randint(0,10)
+    if computerQuestDD > 3:
+        text = "you start blowing him to pieces."
         text = "#1 VICTORY ROYALE!"
-        text = "Great work"
+        text = "feels good to have this much power."
+        done()
+
+    else:
+        text = "He dodges your shot, and you take too long to reload so he pummels you to your death."  
+        text = "With great power comes great responsibility of knowing how to aim."  
+        text = "An embarrassing way to die but maybe next time you'll do better."  
+        text = "Play again."  
+        done()
+
+

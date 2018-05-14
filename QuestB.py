@@ -12,7 +12,7 @@ def QuestBA():
     
     if myDialogueQuestBA == "2":
         text = "You both start breaking the ceiling, there's a chest on his side but you see an Assault Rifle behind you."  
-        computerQuestBA = randint(1,10)
+        computerQuestBA = randint(0,10)
         if computerQuestBA > 4:
             text = "You start unloading on this noob and mow him down before he opens the chest."  
             text = "Great job."  
@@ -47,7 +47,7 @@ def QuestBC():
     text = "12 players left."
     text = "You mow down two noobs running into the safe zone and wait till the numbers windle down to 3."
     text = "You start getting RPG'd, your fort is destroyed and your pinned with fire. You must try and engage."
-    computerQuestBC = randint(1,10)
+    computerQuestBC = randint(0,10)
     if computerQuestBC > 7:
         text = "You build a quick fort and drill him with bullets to his death, you see the last noob hiding so you run up on him and kill him like a boss."  
         text = "#1 VICTORY ROYALE"
