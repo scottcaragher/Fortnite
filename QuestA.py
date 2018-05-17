@@ -2,6 +2,9 @@
 def QuestAA():
     text = "You land on a brick building and pick up a green pump shotgun."
     #70% chance of survival
+    #I used the random integer so it wasn't completely easy picking the right answers for each scenario
+    #even if you do pick the right answer you can still lose from a surviving percentage
+    #I also put in survival for both answers but the story changes for each choice
     computerQuestAA = randint(1,10)
     if computerQuestAA > 3:
         #survived

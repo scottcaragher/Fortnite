@@ -59,6 +59,8 @@ def blit_text(surface, text, pos, font, color=pygame.Color('red')):
         y += word_height  
         #Start on new row
 
+#IF YOU PASTE A QUEST CODE HERE, THE INPUT QUESTIONS WILL POP UP BUT THE TEXT ON PYGAME STILL WONT DISPLAY
+
 #Quest A is titled towers
 if myDialogue == "tilted towers":
     QuestAA()
